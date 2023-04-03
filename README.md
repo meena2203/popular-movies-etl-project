@@ -25,8 +25,8 @@ After we had extracted all the data from the Netflix and Disney+ csv files and p
 * Create new dataframe with desired columns
 * Combined the Disney+ and Netflix DataFrames into one dataframe
 * Below shows the before and after of the dataframes:
-	Before:
-	After:
+	* Before: ![Before](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/netflix_before.png)
+	* After: ![After](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/netflix_after.png)
 
 ### Transformation of TMDB DataFrames
 We also had to transform the TMDB dataframe to match our needs. Below are the transformations performed on the data:
@@ -38,6 +38,9 @@ We also had to transform the TMDB dataframe to match our needs. Below are the tr
 * Combined the cleaned movie and tv Dataframes into one Dataframe and reset the index
 * Found any null values in the ‘release_year’ column and dropped them
 * Formatted the ‘release_year’ column to match the Disney/Netflix DataFrame format (only year)
+* Below shows the before and after of the dataframes:
+	* Before: ![Before](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/tmdb_before.png)
+	* After: ![After](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/tmdb_after.png)
 
 ### Transformation of Final DataFrame
 We also transformed the final dataframe to match our needs. Below are the transformations performed on the final dataframe:
@@ -45,11 +48,20 @@ We also transformed the final dataframe to match our needs. Below are the transf
 * Dropped rows with NaN value for ‘tmdb_popularity’ column
 * Dropped rows with duplicate titles
 * Sorted DataFrame in descending order by TMDB popularity and reset the index
+* Below shows the before and after of the dataframes:
+	* Before: ![Before](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/final_before.png)
+	* After: ![After](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/tmdb_after.png)
 
 # LOAD
 ## Creating the Schema
 After extracting and transforming the data to match our needs, we then had to load the data into a database. We chose to use a Relational SQL structure using postgres to store the data. Below is the schema for our database: 
+	* Schema: ![Schema](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/schema.png)
+	* ERD from pgadmin: ![ERD](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/Popular_Entertainment_ERD.png)
 
 ## Loading the data to the database
-To do this, we used SQLAlchemy to connect Python to PGAdmin and loaded our data using the to_sql function. 
+To do this, we used SQLAlchemy to connect Python to PGAdmin and loaded our data using the to_sql function.
+	* Uploaded Table in pgadmin: ![Table](https://github.com/ryanmarshall80/Team_3_project_2/blob/main/screenshots/Popular_Entertainment%20Table.png) 
+	
+## Future Improvements
+Ability to view all time popularity of shows/ movies rather than the current popularity ranking
 
